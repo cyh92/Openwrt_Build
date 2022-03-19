@@ -18,6 +18,6 @@
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 git clone https://github.com/cyh92/luci-app-onliner package/luci-app-onliner
 git clone https://github.com/cyh92/luci-app-pppoe-server package/luci-app-pppoe-server
-git clone https://github.com/cyh92/luci-app-control-speedlimit.git package/luci-app-control-speedlimit
+#git clone https://github.com/cyh92/luci-app-control-speedlimit.git package/luci-app-control-speedlimit
 git clone -b v1.7.2 --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 rm -rf ./feeds/luci/themes/luci-themes-argon

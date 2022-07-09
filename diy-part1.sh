@@ -16,5 +16,6 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-git clone -b v1.7.3 --depth=1 https://github.com/cyh92/luci-theme-argon package/luci-theme-argon
+git clone -b v1.7.2 --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+#git clone -b v1.7.3 --depth=1 https://github.com/cyh92/luci-theme-argon package/luci-theme-argon
 rm -rf ./feeds/luci/themes/luci-themes-argon

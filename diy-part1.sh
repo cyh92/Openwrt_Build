@@ -16,8 +16,5 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-#git clone https://github.com/cyh92/luci-app-onliner package/luci-app-onliner
-#git clone -b pppoe https://gitee.com/cyh92/cyhpackage package/luci-app-pppoe-server
-#git clone -b speedlimit https://gitee.com/cyh92/cyhpackage package/luci-app-control-speedlimit
-git clone https://gitee.com/cyh92/luci-theme-argon package/luci-theme-argon
+git clone -b v1.7.3 --depth=1 https://github.com/cyh92/luci-theme-argon package/luci-theme-argon
 rm -rf ./feeds/luci/themes/luci-themes-argon

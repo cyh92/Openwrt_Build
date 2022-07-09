@@ -16,7 +16,7 @@
 date=`date +%Y-%m-%d.%H:%M`
 sed -i -e "/\(# \)\?REVISION:=/c\REVISION:=$date" -e '/VERSION_CODE:=/c\VERSION_CODE:=$(REVISION)' include/version.mk
 # 调整argon登录框为居中
-sed -i "/.login-page {/i\\
+# sed -i "/.login-page {/i\\
 .login-container {\n\
   margin: auto;\n\
   height: 420px\!important;\n\
@@ -53,4 +53,4 @@ sed -i "/.login-page {/i\\
 .ftc {\n\
   bottom: 0\!important;\n\
 }" feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/css/cascade.css
-sed -i "s/margin-left: 0rem \!important;/margin-left: auto\!important;/g" feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/css/cascade.css
+# sed -i "s/margin-left: 0rem \!important;/margin-left: auto\!important;/g" feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/css/cascade.css

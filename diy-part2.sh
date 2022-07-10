@@ -15,6 +15,6 @@
 #设置版本为当前时间
 # date=`date +%Y-%m-%d.%H:%M`
 #date=`date +%m.%d.%Y`
-date=`date +%Y.%d.%m`
+date=`date +%Y.%m.%d`
 sed -i -e "/\(# \)\?REVISION:=/c\REVISION:=$date" -e '/VERSION_CODE:=/c\VERSION_CODE:=$(REVISION)' include/version.mk
 

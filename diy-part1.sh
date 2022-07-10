@@ -17,5 +17,9 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 #git clone -b v1.7.2 --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone -b v1.7.2 --depth=1 https://github.com/cyh92/luci-theme-argon package/luci-theme-argon
-rm -rf ./feeds/luci/themes/luci-themes-argon
+# 删除自定义源默认的 argon 主题
+rm -rf package/lean/luci-theme-argon
+# 部分第三方源自带 argon 主题，上面命令删除不掉的请运行下面命令
+find ./ -name luci-theme-argon | xargs rm -rf;
+#拉取 argon的源码
+git clone --depth=1 https://github.com/cyh92/luci-theme-argon package/luci-theme-argon

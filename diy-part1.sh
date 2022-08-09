@@ -23,3 +23,5 @@ rm -rf package/lean/luci-theme-argon
 find ./ -name luci-theme-argon | xargs rm -rf;
 #拉取 argon的源码
 git clone --depth=1 https://github.com/cyh92/luci-theme-argon package/luci-theme-argon
+#全能推送
+git clone https://github.com/cyh92/luci-app-pushbot package/luci-app-pushbot

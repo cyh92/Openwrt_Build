@@ -178,12 +178,12 @@ jobs:
 
     - name: Upload firmware to release
       uses: softprops/action-gh-release@v1
-      if: steps.tag.outputs.status == 'success' && !cancelled()
+      if: env.UPLOAD_RELEASES == 'true' && env.Compile_Result == 'true' && !cancelled()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ env.RELEASE_TAG }}
-        body_path: release.txt
+        tag_name: AutoUpdate
+        body_path: Release_info
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs

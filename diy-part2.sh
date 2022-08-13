@@ -15,6 +15,7 @@
 #设置版本为当前时间
 # date=`date +%Y-%m-%d.%H:%M`
 #date=`date +%m.%d.%Y`
-date=`date +%Y.%m.%d_%H%M%S`
+#date=`date +%Y.%m.%d_%H%M%S`
+TEMP=$(date +"OpenWrt_%Y%m%d_%H%M%S")
 #sed -i -e "/\(# \)\?REVISION:=/c\REVISION:=$date" -e '/VERSION_CODE:=/c\VERSION_CODE:=$(REVISION)' include/version.mk
-sed -i "s/OpenWrt /v$date\/ /g" openwrt/package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /v${TEMP:8}\/ /g" openwrt/package/lean/default-settings/files/zzz-default-settings

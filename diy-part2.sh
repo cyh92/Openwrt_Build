@@ -14,7 +14,7 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 #设置版本为当前时间
 # date=`date +%Y-%m-%d.%H:%M`
-date=`date +x%Y.%d.%d`
+date=`date +%Y.%m.%d`
 TEMP=$(date +"%Y%m%d_%H%M%S")
 sed -i -e "/\(# \)\?REVISION:=/c\REVISION:=$date" -e '/VERSION_CODE:=/c\VERSION_CODE:=$(REVISION)' include/version.mk
 sed -i "s/OpenWrt /v${TEMP}\/ /g" package/lean/default-settings/files/zzz-default-settings

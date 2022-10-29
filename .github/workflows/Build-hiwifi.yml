@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: 20221001
-  FEEDS_CONF: openwrt.feeds
+  FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: hiwifi_hc5962.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh

@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build-hiwifi
+name: Build-x86
 
 on:
   repository_dispatch:
@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: 20221001
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: hiwifi_hc5962.config
+  CONFIG_FILE: x86.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false

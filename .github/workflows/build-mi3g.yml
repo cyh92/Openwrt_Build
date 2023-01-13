@@ -20,8 +20,8 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt
-  REPO_BRANCH: v22.03.3
+  REPO_URL: https://github.com/coolsnowwolf
+  REPO_BRANCH: 20221001
   FEEDS_CONF: oui.feeds
   CONFIG_FILE: mi3g.config
   DIY_P1_SH: oui-1.sh

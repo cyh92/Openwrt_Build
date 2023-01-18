@@ -16,5 +16,5 @@
 # date=`date +%Y-%m-%d.%H:%M`
 date=`date +%Y.%m.%d`
 TEMP=$(date +"%Y%m%d_%H%M%S")
-sed -i -e "/\(# \)\?REVISION:=/c\REVISION:=$date" -e '/VERSION_CODE:=/c\VERSION_CODE:=$(REVISION)' include/version.mk
-sed -i "s/OpenWrt /v${TEMP}\/ /g" package/lean/default-settings/files/zzz-default-settings
+#sed -i -e "/\(# \)\?REVISION:=/c\REVISION:=$date" -e '/VERSION_CODE:=/c\VERSION_CODE:=$(REVISION)' include/version.mk
+#sed -i "s/OpenWrt /v${TEMP}\/ /g" package/lean/default-settings/files/zzz-default-settings

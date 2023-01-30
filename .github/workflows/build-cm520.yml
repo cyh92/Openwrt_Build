@@ -155,7 +155,7 @@ jobs:
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
     - name: 发布固件至 Release
-      uses: actions/action-gh-release@main
+      uses: softprops/action-gh-release@main
       if: env.UPLOAD_RELEASES == 'true' && env.Compile_Result == 'true' && !cancelled()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

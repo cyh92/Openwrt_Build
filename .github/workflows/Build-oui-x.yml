@@ -22,7 +22,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: 20200915
-  FEEDS_CONF: oui.feeds
+  FEEDS_CONF: oui-x.feeds
   CONFIG_FILE: mi3g.config
   DIY_P1_SH: oui-1.sh
   DIY_P2_SH: oui-2.sh

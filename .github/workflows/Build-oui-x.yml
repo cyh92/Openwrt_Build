@@ -18,6 +18,15 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
+      config:
+        description: '固件配置'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt

@@ -18,12 +18,21 @@ on:
         description: '管理地址IP'
         required: false
         default: '192.168.1.1'
+      config:
+        description: '固件配置'
+        required: true
+        default: 'hiwifi_hc5962.config'
+        type: choice
+        options:
+        - hiwifi_hc5962.config
+        - mi.config
+        - cm520.config
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: 20221001
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: hiwifi_hc5962.config
+  CONFIG_FILE: ${{ github.event.inputs.config }}
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true

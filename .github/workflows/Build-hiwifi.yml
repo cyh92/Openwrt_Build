@@ -19,7 +19,7 @@ on:
         required: false
         default: '192.168.1.1'
       config:
-        description: '固件配置'
+        description: '选择设备配置'
         required: true
         default: 'hiwifi_hc5962.config'
         type: choice

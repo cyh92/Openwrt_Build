@@ -85,8 +85,9 @@ jobs:
       
     - name: 调整默认设置
       run: |
+        chmod +x inputs.sh
         cd openwrt
-        sed -i 's#/192.168.1.1//${{github.event.inputs.defaultIP}}/g' package/base-files/files/bin/config_generate
+        $GITHUB_WORKSPACE/inputs.sh ${{ github.event.inputs.defaultIP }}
       
     - name: Openwrt AutoUpdate
       run: |

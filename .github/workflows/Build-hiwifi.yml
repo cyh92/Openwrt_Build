@@ -81,13 +81,8 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
-      
-    - name: 调整默认设置
-      run: |
-        chmod +x inputs.sh
-        cd openwrt
-        $GITHUB_WORKSPACE/inputs.sh ${{ github.event.inputs.defaultIP }}
+      run: cd openwrt && ./scripts/feeds install -a     
+   
       
     - name: Openwrt AutoUpdate
       run: |
@@ -103,13 +98,13 @@ jobs:
         sed -i "s/OpenWrt /${{github.actor}} compiled (${TEMP:8}) \/ OpenWrt /g" openwrt/package/lean/default-settings/files/zzz-default-settings
       
       
-    - name: Load custom configuration
+    - name: 加载配置函数
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P2_SH   
+        $GITHUB_WORKSPACE/$DIY_P2_SH ${{ github.event.inputs.defaultIP }}  
 
     - name: Download package
       id: package
